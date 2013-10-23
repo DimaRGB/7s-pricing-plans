@@ -46,6 +46,7 @@ $color-junior: green;
 					border-radius: $block-width / 2;
 					width: $large-circle-width;
 					height: $large-circle-width;
+					box-sizing: content-box;
 					position: absolute;
 					top: 0;
 					left: 0;

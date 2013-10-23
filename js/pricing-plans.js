@@ -1,3 +1,5 @@
+(function ($) {
+var imgPath = '/wp-content/uploads/2013/10/';
 var opacity = 0.2, blockWidth;
 var colorClass = ['junior', 'middle', 'senior'];
 var pricingPlans = [
@@ -55,8 +57,13 @@ jQuery(function($) {
 	activePricingPlan($circles.find('.large-circle').first());
 });
 
-function getLeft(el, index) {
-	return index * blockWidth + (blockWidth - $(el).outerWidth()) / 2 - 1;
+jQuery.fn.setLeft = function(index) {
+	this
+		.stop()
+		.animate({
+			'left': index * blockWidth + (blockWidth - $(this).outerWidth()) / 2 - 1
+		}, 300);
+	return this;
 }
 
 function renderDiagram(experts) {
@@ -72,14 +79,14 @@ function renderDiagram(experts) {
 		$smallCircles.empty();
 		$text.text(text);
 		if( n ) {
-			$img.attr('src', './img/face' + n + '.png');
+			$img.attr('src', imgPath + 'face' + n + '.png');
 			if( n > 1 )
 				$text.text(n + ' ' + text + 's');
 			for( var i in expert )
 				$smallCircles.append('<div class="small-circle ' + colorClass[expert[i]] + '">')
 			
 		} else
-			$img.attr('src', './img/face1.png');
+			$img.attr('src', imgPath + 'face1.png');
 		$(el)
 			.stop()
 			.fadeTo(300, n ? 1 : opacity);
@@ -99,10 +106,12 @@ function activePricingPlan($circle) {
 	$circle.addClass('active');
 
 	$('.scrollpanel .desc')
-		.css('left', function() { return getLeft(this, index); })
+		.setLeft(index)
 		.text(desc);
 	$('.scrollpanel .scrollbar .handler')
-		.css('left', function() { return getLeft(this, index); })
+		.setLeft(index)
 		.text(price + '$/m');
 	renderDiagram(experts);
 }
+
+})(jQuery);
