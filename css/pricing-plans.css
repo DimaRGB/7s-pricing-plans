@@ -9,25 +9,25 @@
 #pricing-plans {
   position: relative;
   margin: 0 auto;
-  width: 980px;
+  width: 861px;
   text-align: center; }
   #pricing-plans .scrollpanel .desc {
     position: absolute;
-    width: 210px;
+    width: 184.5px;
     color: #1269b0; }
   #pricing-plans .scrollpanel .circles {
     display: inline-block;
     margin: 50px auto; }
     #pricing-plans .scrollpanel .circles .wrap-large-circle {
-      width: 140px;
-      height: 140px;
+      width: 123px;
+      height: 123px;
       position: relative;
       float: left; }
       #pricing-plans .scrollpanel .circles .wrap-large-circle .large-circle {
         margin: auto;
-        border-radius: 70px;
-        width: 117.6px;
-        height: 117.6px;
+        border-radius: 61.5px;
+        width: 103.32px;
+        height: 103.32px;
         box-sizing: content-box;
         position: absolute;
         top: 0;
@@ -35,14 +35,15 @@
         bottom: 0;
         right: 0;
         background-color: black;
-        color: white; }
+        color: white;
+        cursor: pointer; }
         #pricing-plans .scrollpanel .circles .wrap-large-circle .large-circle .title {
           position: relative;
-          top: 49.8px;
-          font-size: 18px; }
+          top: 44.16px;
+          font-size: 15.0px; }
         #pricing-plans .scrollpanel .circles .wrap-large-circle .large-circle.active {
           background-color: #1269b0;
-          border: 11.2px solid #ededed; }
+          border: 9.84px solid #ededed; }
   #pricing-plans .scrollpanel .scrollbar {
     position: relative;
     height: 9px;
@@ -54,8 +55,8 @@
       box-sizing: border-box;
       border: 1px solid #bbbbbb;
       border-radius: 4.5px;
-      padding: 5px 20px;
-      width: 117.6px;
+      padding: 5px 0;
+      width: 103.32px;
       position: absolute;
       left: 0;
       top: -11.5px;
@@ -79,10 +80,10 @@
         background-color: green; }
     #pricing-plans .diagram .experts {
       margin: 0 auto;
-      width: 840px; }
+      width: 738px; }
       #pricing-plans .diagram .experts .expert {
         margin: 14px 0;
-        width: 140px;
+        width: 123px;
         float: left; }
         #pricing-plans .diagram .experts .expert .text {
           margin-top: 10px;

@@ -1,45 +1,48 @@
 (function ($) {
-var imgPath = '/wp-content/uploads/2013/10/';
-var opacity = 0.2, blockWidth;
-var colorClass = ['junior', 'middle', 'senior'];
-var pricingPlans = [
-	{
-		title: 'Fresh starter'
-	,	desc: 'Fresh starter.'
-	,	price: 3000
-	,	experts: [[1], [1], [], [], [], []]
-	}, {
-		title: 'Blue rare'
-	,	desc: 'Blue rare.'
-	,	price: 4000
-	,	experts: [[1, 0], [1], [0], [], [0], []]
-	}, {
-		title: 'Rare'
-	,	desc: 'Rare.'
-	,	price: 6000
-	,	experts: [[2, 0], [1], [0], [1], [1], []]
-	}, {
-		title: 'Medium rare'
-	,	desc: 'Medium rare.'
-	,	price: 8000
-	,	experts: [[2, 1], [1], [0], [1], [1], []]
-	}, {
-		title: 'Medium'
-	,	desc: 'Medium. Start feeling what a development team is.'
-	,	price: 10000
-	,	experts: [[2, 1, 0], [2], [1], [1], [1], [1]]
-	}, {
-		title: 'Medium well'
-	,	desc: 'Medium well.'
-	,	price: 12000
-	,	experts: [[2, 1, 1], [2], [1], [2], [2], [1]]
-	}, {
-		title: 'Well done'
-	,	desc: 'Well done.'
-	,	price: 15000
-	,	experts: [[2, 2, 1], [2], [2], [2], [2], [2]]
-	}
-];
+
+var imgPath = '/wp-content/uploads/2013/10/'
+,	defaultIndex = 0
+,	opacity = 0.3
+,	blockWidth
+,	colorClass = ['junior', 'middle', 'senior']
+,	pricingPlans = [
+		{
+			title: 'Fresh starter'
+		,	desc: 'Fresh starter.'
+		,	price: 3000
+		,	experts: [[1], [1], [], [], [], []]
+		}, {
+			title: 'Blue rare'
+		,	desc: 'Blue rare.'
+		,	price: 4000
+		,	experts: [[1, 0], [1], [0], [], [0], []]
+		}, {
+			title: 'Rare'
+		,	desc: 'Rare.'
+		,	price: 6000
+		,	experts: [[2, 0], [1], [0], [1], [1], []]
+		}, {
+			title: 'Medium rare'
+		,	desc: 'Medium rare.'
+		,	price: 8000
+		,	experts: [[2, 1], [1], [0], [1], [1], []]
+		}, {
+			title: 'Medium'
+		,	desc: 'Medium. Start feeling what a development team is.'
+		,	price: 10000
+		,	experts: [[2, 1, 0], [2], [1], [1], [1], [1]]
+		}, {
+			title: 'Medium well'
+		,	desc: 'Medium well.'
+		,	price: 12000
+		,	experts: [[2, 1, 1], [2], [1], [2], [2], [1]]
+		}, {
+			title: 'Well done'
+		,	desc: 'Well done.'
+		,	price: 15000
+		,	experts: [[2, 2, 1], [2], [2], [2], [2], [2]]
+		}
+	];
 
 jQuery(function($) {
 	var $circles = $('#pricing-plans .scrollpanel .circles');
@@ -54,7 +57,7 @@ jQuery(function($) {
 			.appendTo($wrapCircle);
 		$wrapCircle.appendTo($circles);
 	});
-	activePricingPlan($circles.find('.large-circle').first());
+	activePricingPlan($circles.find('.large-circle').eq(defaultIndex));
 });
 
 jQuery.fn.setLeft = function(index) {
