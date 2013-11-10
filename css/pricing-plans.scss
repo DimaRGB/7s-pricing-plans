@@ -58,7 +58,10 @@ $color-junior: green;
 					.title {
 						position: relative;
 						top: $large-circle-width / 2 - ($title-size / 2);
-						font-size: $title-size;
+						font: {
+							size: $title-size;
+							weight: bold;
+						}
 					}
 					&.active {
 						background-color: $color-blue;

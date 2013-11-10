@@ -40,7 +40,8 @@
         #pricing-plans .scrollpanel .circles .wrap-large-circle .large-circle .title {
           position: relative;
           top: 44.16px;
-          font-size: 15.0px; }
+          font-size: 15.0px;
+          font-weight: bold; }
         #pricing-plans .scrollpanel .circles .wrap-large-circle .large-circle.active {
           background-color: #1269b0;
           border: 9.84px solid #ededed; }

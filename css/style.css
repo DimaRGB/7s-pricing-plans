@@ -1,0 +1,97 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+#pricing-plans {
+  position: relative;
+  margin: 0 auto;
+  width: 980px;
+  text-align: center; }
+  #pricing-plans .scrollpanel .desc {
+    position: absolute;
+    width: 210px;
+    color: #1269b0; }
+  #pricing-plans .scrollpanel .circles {
+    display: inline-block;
+    margin: 50px auto; }
+    #pricing-plans .scrollpanel .circles .wrap-large-circle {
+      width: 140px;
+      height: 140px;
+      position: relative;
+      float: left; }
+      #pricing-plans .scrollpanel .circles .wrap-large-circle .large-circle {
+        margin: auto;
+        border-radius: 70px;
+        width: 117.6px;
+        height: 117.6px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: black;
+        color: white; }
+        #pricing-plans .scrollpanel .circles .wrap-large-circle .large-circle .title {
+          position: relative;
+          top: 49.8px;
+          font-size: 18px; }
+        #pricing-plans .scrollpanel .circles .wrap-large-circle .large-circle.active {
+          background-color: #1269b0;
+          border: 11.2px solid #ededed; }
+  #pricing-plans .scrollpanel .scrollbar {
+    position: relative;
+    height: 9px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4.5px;
+    background-color: #EEE; }
+    #pricing-plans .scrollpanel .scrollbar .handler {
+      display: inline-block;
+      box-sizing: border-box;
+      border: 1px solid #bbbbbb;
+      border-radius: 4.5px;
+      padding: 5px 20px;
+      width: 117.6px;
+      position: absolute;
+      left: 0;
+      top: -11.5px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      color: #1269b0;
+      background-color: white; }
+  #pricing-plans .diagram {
+    margin: 16px 0;
+    font-size: 14px; }
+    #pricing-plans .diagram .small-circle {
+      display: inline-block;
+      margin: 0 1.2px;
+      border-radius: 4px;
+      width: 8px;
+      height: 8px; }
+      #pricing-plans .diagram .small-circle.senior {
+        background-color: red; }
+      #pricing-plans .diagram .small-circle.middle {
+        background-color: orange; }
+      #pricing-plans .diagram .small-circle.junior {
+        background-color: green; }
+    #pricing-plans .diagram .experts {
+      margin: 0 auto;
+      width: 840px; }
+      #pricing-plans .diagram .experts .expert {
+        margin: 14px 0;
+        width: 140px;
+        float: left; }
+        #pricing-plans .diagram .experts .expert .text {
+          margin-top: 10px;
+          margin-bottom: 4px; }
+        #pricing-plans .diagram .experts .expert .small-circles {
+          height: 8px; }
+    #pricing-plans .diagram .bottom {
+      margin-top: 16px; }
+      #pricing-plans .diagram .bottom .block {
+        display: inline-block;
+        width: block-width; }
+        #pricing-plans .diagram .bottom .block .small-circle {
+          margin: 0 9.6px; }
