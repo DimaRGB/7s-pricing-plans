@@ -14,10 +14,6 @@ $color-senior: red;
 $color-middle: orange;
 $color-junior: green;
 
-body {
-	min-width: $block-width * 8.1;
-}
-
 .clearfix:after {
 	content: ".";
 	display: block;
@@ -27,108 +23,117 @@ body {
 	height: 0;
 }
 
-#pricing-plans {
+#pricing-plans-outer-wrapper {
+	height: 500px;
 	position: relative;
-	margin: 0 auto;
-	width: $block-width * 7;
-	text-align: center;
-	.scrollpanel {
-		.desc {
-			position: absolute;
-			width: $desc-width;
-			color: $color-blue;
-		}
-		.circles {
-			display: inline-block;
-			margin: 50px auto;
-			.wrap-large-circle {
-				width: $block-width;
-				height: $block-width;
-				position: relative;
-				float: left;
-				.large-circle {
-					margin: auto;
-					border-radius: $block-width / 2;
-					width: $large-circle-width;
-					height: $large-circle-width;
-					box-sizing: content-box;
+	overflow-x: auto;
+	#pricing-plans-inner-wrapper {
+		position: absolute;
+		min-width: $block-width * 8.1;
+		#pricing-plans {
+			position: relative;
+			margin: 0 auto;
+			width: $block-width * 7;
+			text-align: center;
+			.scrollpanel {
+				.desc {
 					position: absolute;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-					background-color: $color-black;
-					color: $color-white;
-					cursor: pointer;
-					.title {
+					width: $desc-width;
+					color: $color-blue;
+				}
+				.circles {
+					display: inline-block;
+					margin: 50px auto;
+					.wrap-large-circle {
+						width: $block-width;
+						height: $block-width;
 						position: relative;
-						top: $large-circle-width / 2 - ($title-size / 2);
-						font: {
-							size: $title-size;
-							weight: bold;
+						float: left;
+						.large-circle {
+							margin: auto;
+							border-radius: $block-width / 2;
+							width: $large-circle-width;
+							height: $large-circle-width;
+							box-sizing: content-box;
+							position: absolute;
+							top: 0;
+							left: 0;
+							bottom: 0;
+							right: 0;
+							background-color: $color-black;
+							color: $color-white;
+							cursor: pointer;
+							.title {
+								position: relative;
+								top: $large-circle-width / 2 - ($title-size / 2);
+								font: {
+									size: $title-size;
+									weight: bold;
+								}
+							}
+							&.active {
+								background-color: $color-blue;
+								border: ($block-width - $large-circle-width) / 2 solid $color-shadow;
+							}
 						}
 					}
-					&.active {
-						background-color: $color-blue;
-						border: ($block-width - $large-circle-width) / 2 solid $color-shadow;
+				}
+				.scrollbar {
+					position: relative;
+					height: $scrollbar-height;
+					border: 1px solid $color-border;
+					border-radius: $scrollbar-height / 2;
+					background-color: #EEE;
+					.handler {
+						display: inline-block;
+						box-sizing: border-box;
+						border: 1px solid $color-border;
+						border-radius: $scrollbar-height / 2;
+						padding: $scrollbar-handler-size / 2 0;
+						width: $large-circle-width;
+						position: absolute;
+						left: 0;
+						top: -($scrollbar-handler-size + 22 - $scrollbar-height) / 2;
+						box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+						color: $color-blue;
+						background-color: white;
 					}
 				}
 			}
-		}
-		.scrollbar {
-			position: relative;
-			height: $scrollbar-height;
-			border: 1px solid $color-border;
-			border-radius: $scrollbar-height / 2;
-			background-color: #EEE;
-			.handler {
-				display: inline-block;
-				box-sizing: border-box;
-				border: 1px solid $color-border;
-				border-radius: $scrollbar-height / 2;
-				padding: $scrollbar-handler-size / 2 0;
-				width: $large-circle-width;
-				position: absolute;
-				left: 0;
-				top: -($scrollbar-handler-size + 22 - $scrollbar-height) / 2;
-				box-shadow: 0 1px 1px rgba(0,0,0,0.15);
-				color: $color-blue;
-				background-color: white;
-			}
-		}
-	}
-	.diagram {
-		margin: 16px 0;
-		font-size: 14px;
-		.small-circle {
-			display: inline-block;
-			margin: 0 $small-circle-radius * 0.3;
-			border-radius: $small-circle-radius;
-			width: $small-circle-radius * 2;
-			height: $small-circle-radius * 2;
-			&.senior { background-color: $color-senior; }
-			&.middle { background-color: $color-middle; }
-			&.junior { background-color: $color-junior; }
-		}
-		.experts {
-			margin: 0 auto;
-			width: $block-width * 6;
-			.expert {
-				margin: 14px 0;
-				width: $block-width;
-				float: left;
-				.text { margin-top: 10px; margin-bottom: 4px; }
-				.small-circles {
+			.diagram {
+				margin: 16px 0;
+				font-size: 14px;
+				.small-circle {
+					display: inline-block;
+					margin: 0 $small-circle-radius * 0.3;
+					border-radius: $small-circle-radius;
+					width: $small-circle-radius * 2;
 					height: $small-circle-radius * 2;
+					&.senior { background-color: $color-senior; }
+					&.middle { background-color: $color-middle; }
+					&.junior { background-color: $color-junior; }
 				}
-			}
-		}
-		.bottom {
-			margin-top: 16px;
-			.block {
-				display: inline-block;
-				width: block-width;
-				.small-circle { margin: 0 $small-circle-radius * 2.4; }
+				.experts {
+					margin: 0 auto;
+					width: $block-width * 6;
+					.expert {
+						margin: 14px 0;
+						width: $block-width;
+						float: left;
+						.text { margin-top: 10px; margin-bottom: 4px; }
+						.small-circles {
+							height: $small-circle-radius * 2;
+						}
+					}
+				}
+				.bottom {
+					margin-top: 16px;
+					.block {
+						display: inline-block;
+						width: block-width;
+						.small-circle { margin: 0 $small-circle-radius * 2.4; }
+					}
+				}
 			}
 		}
 	}

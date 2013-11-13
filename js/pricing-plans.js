@@ -45,13 +45,14 @@ var imgPath = '/wp-content/uploads/2013/10/'
 	];
 
 jQuery(function($) {
+	var eventName = $.isMobile ? 'click touchstart touchend' : 'mouseenter';
 	var $circles = $('#pricing-plans .scrollpanel .circles');
 	blockWidth = $('#pricing-plans').width() / pricingPlans.length;
 	$.each(pricingPlans, function(index, value) {
 		var $wrapCircle = $('<div class="wrap-large-circle" />');
 		$('<div class="large-circle" data-index="' + index + '"></div>')
 			.append('<div class="title">' + value.title + '</div>')
-			.on('mouseenter', function() {
+			.on(eventName, function() {
 				activePricingPlan($(this));
 			})
 			.appendTo($wrapCircle);
