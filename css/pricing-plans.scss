@@ -1,6 +1,7 @@
 $block-width: 123px;
 $scrollbar-height: 9px;
 $scrollbar-handler-size: 10px;
+$desc-width: $block-width * 1.5;
 $large-circle-width: $block-width * 0.84;
 $small-circle-radius: 4px;
 $title-size: $block-width / 8.2;
@@ -12,6 +13,10 @@ $color-border: #BBB;
 $color-senior: red;
 $color-middle: orange;
 $color-junior: green;
+
+body {
+	min-width: $block-width * 7 + $desc-width - $block-width;
+}
 
 .clearfix:after {
 	content: ".";
@@ -30,7 +35,7 @@ $color-junior: green;
 	.scrollpanel {
 		.desc {
 			position: absolute;
-			width: $block-width * 1.5;
+			width: $desc-width;
 			color: $color-blue;
 		}
 		.circles {

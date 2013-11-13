@@ -1,3 +1,6 @@
+body {
+  min-width: 922.5px; }
+
 .clearfix:after {
   content: ".";
   display: block;
